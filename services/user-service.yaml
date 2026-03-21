@@ -28,6 +28,7 @@ server:
   port: 0
   forward-headers-strategy: framework
 
-app:
-  storage:
-    path: ${user.home}/.ijse/eca/students
+  eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+
