@@ -4,15 +4,15 @@ spring:
       enabled: true
 
   mongodb:
-    host: localhost
-    port: 27017
-    database: eca
-    username: root
-    password: mongodb
-    authentication-database: admin
+    uri: mongodb://root:Gg5i31suEhGY_jC6OtenxQ9AoTpf1jF-gfWaWgDipm1NZbZK@a1e0ac67-5385-4a37-97c9-5962ae51b2c1.asia-southeast1.firestore.goog:443/db-nexashopping?loadBalanced=true&tls=true&authMechanism=SCRAM-SHA-256&retryWrites=false
+    
 
 server:
-  port: 8001
+  port: 0
+
+  eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
 
 eureka:
   instance:
