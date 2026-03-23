@@ -28,7 +28,7 @@ server:
   port: 0
   forward-headers-strategy: framework
 
-  eureka:
+eureka:
   instance:
     instance-id: ${spring.application.name}:${random.value}
     prefer-ip-address: true
