@@ -30,7 +30,8 @@ server:
 
   eureka:
   instance:
-    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true
 
 app:
   storage:
